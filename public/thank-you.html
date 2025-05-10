@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    function showAlert() {
+        window.history.forward();
+    }
+    setTimeout("showAlert()", 0);
+    window.onunload = function () { null };
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - ShopWithUs</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span style="color: white;">ShopWith</span><span style="color: #ff9900;">Us</span>
+    </div>
+  </header>
+
+  <section>
+    <h1>Thank you for your time and interest.</h1>
+    <p>Your selection has been recorded. You will now be forwarded to our exit survey.</p>
+    <!-- Removed "Return to Home" button -->
+  </section>
+
+  <script>
+    // Redirect to Qualtrics survey after 5 seconds
+    setTimeout(() => {
+      window.location.href = 'https://iu.co1.qualtrics.com/jfe/form/SV_23HPRfQqKyWHCXs'; 
+    }, 5000);
+  </script>
+</body>
+</html>
