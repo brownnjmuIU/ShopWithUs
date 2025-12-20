@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    function showAlert() {
+        window.history.forward();
+    }
+    setTimeout("showAlert()", 0);
+    window.onunload = function () { null };
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-weight: bold;
+    }
+    header .logo span {
+      color: #ff9900;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .training-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .training-info h2 {
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+    .training-info p, .training-info ul {
+      color: #666;
+      line-height: 1.6;
+    }
+    .training-info ul {
+      padding-left: 20px;
+    }
+    .training-info h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+    .training-info .highlight {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #e6e6e6;
+      padding: 0 2px;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 25px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #ff9900;
+    }
+    input:checked + .slider:before {
+      transform: translateX(25px);
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .accept-btn {
+      background-color: #ff9900;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .llm-report-btn {
+      padding: 10px 20px;
+      background: none;
+      color: #ff9900;
+      border: 2px solid #ff9900;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    .opt-out-btn {
+      background: none;
+      border: none;
+      color: black;
+      cursor: default;
+      text-decoration: none;
+    }
+    .opt-out-btn:hover {
+      background: none;
+      border: none;
+      cursor: default;
+      text-decoration: none;
+    }
+    textarea {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      width: 75%;
+      min-height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    textarea::placeholder {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #666;
+    }
+    .back-btn {
+      background-color: #ff9900;
+      color: white;
+      border: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span style="color: white;">ShopWith</span><span style="color: #ff9900;">Us</span>
+    </div>
+  </header>
+  <main>
+    <div class="training-info">
+      <h2>Do Not Use My Personal Information As Training Data</h2>
+      <p>The California Consumer Privacy Act (CCPA) grants residents the right to opt out of the use of their personal information as training data for large language models (LLMs). Under the CCPA, training data can mean the use of your personal information as input into statistical models that predict personalized output that can enhance your customer experience.</p>
+      <ul>
+        <li><b>If you browse on ShopWithUs</b>, we may be using cookies and similar tracking technologies (we refer to these collectively as "cookies") that involve the use of your personal information as training data.</li>
+        <li><b>If you interact with ShopWithUs in other ways</b>, such as signing up for an account, we may use your personal information in other ways, such as sharing your information with third parties for their training data purposes.</li>
+        <li><b>To opt out of the use of personal information as training data on this site</b>, please click "Opt Out." This opt out function is browser and device-specific. Therefore, if you visit this site again from a different browser or device, or clear your cookies, you will need to opt out of training data through cookies again.</li>
+      </ul>
+      <h3><u>Why Training Data Matters</u></h3>
+      <p>We use your data to train large language models (LLMs) to improve your customer experience. If you opt out, your data will not be used as training data, which may limit personalized recommendations and other AI-based enhanced experiences.</p>
+      <div class="toggle-container">
+        <span><b>Use My Personal Information On This Site As Training Data:</b></span> 
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-response" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p>Even after opting out, you may continue to see personalized recommendations that may include interest-based information about your visit and information from third parties. Please remember that this opt out is browser and device-specific. If you visit this site from a different browser or device, or clear your cookies, you must formally opt out again.</p>
+      <div class="buttons">
+        <button id="ok-btn" class="accept-btn">Confirm My Choices</button>
+        <button id="report-btn" class="llm-report-btn" style="color: #ff9900;">Report</button>
+        <button id="opt-out-btn" class="opt-out-btn">Opt Out</button>
+      </div>
+      <div id="reportBox" style="display: none; margin-top: 20px;">
+        <textarea id="reportText" placeholder="We value your feedback. Please let us know how we can improve your experience"></textarea>
+        <div class="buttons" style="margin-top: 10px; text-align: center;">
+          <button id="back-btn" class="back-btn" style="color: white">Back</button>
+          <button id="submit-report" class="llm-report-btn" style="color: #ff9900">Report</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
